@@ -10,11 +10,14 @@ public class Kata2 {
         
         String [] vector1  = {"Ana","Juan","Pedro","Lucia","Pedro","Lucia","Pedro","Lucia","Pedro","Lucia","Pedro","Lucia"};
         
-        Histogram histogram = new Histogram(vector);
-        HashMap <Object, Integer> histo = histogram.getHistogram();
+        Histogram<Object> histogram = CalculaHistogram.computeHisto(vector);
+                
+                //Salida
+                ;
+                
         //Salida
-        for (Object key : histo.keySet()) {
-            System.out.println(key + " : " + histo.get(key));
+        for (Object key : histogram.keySet()) {
+            System.out.println(key + " : " + histogram.get(key));
         }
     }
 
