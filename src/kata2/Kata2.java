@@ -6,11 +6,14 @@ public class Kata2 {
 
     public static void main(String[] args) {
         //Entrada de datos
-        int[] vector = {1, 1, 12, 2, 3, 4, 5, 100, 100, -4, 255};
+        Integer [] vector = {1, 1, 12, 2, 3, 4, 5, 100, 100, -4, 255};
+        
+        String [] vector1  = {"Ana","Juan","Pedro","Lucia","Pedro","Lucia","Pedro","Lucia","Pedro","Lucia","Pedro","Lucia"};
+        
         Histogram histogram = new Histogram(vector);
-        HashMap <Integer, Integer> histo = histogram.getHistogram();
+        HashMap <Object, Integer> histo = histogram.getHistogram();
         //Salida
-        for (Integer key : histo.keySet()) {
+        for (Object key : histo.keySet()) {
             System.out.println(key + " : " + histo.get(key));
         }
     }
